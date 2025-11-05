@@ -19,15 +19,6 @@ header {
   /* background: transparent; */
 }
 
-.menu-mobile {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  /* background: transparent; */
-}
-
 .div-list {
   display: flex;
   align-items: center;
@@ -51,15 +42,6 @@ header {
   border-radius: 50%;
   color: #333;
   transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: black;
 }
 
 .ul-list {
@@ -110,7 +92,7 @@ header {
   gap: 3rem;
 }
 
-.mobile-links {
+/* .mobile-links {
   display: none;
   justify-content: center;
   list-style: none;
@@ -129,7 +111,7 @@ header {
 
 .mobile-links li.active a {
   color: #000;
-}
+} */
 
 /* fine header  */
 
@@ -844,7 +826,7 @@ body.dark .experience hr {
 }
 
 .btn-send {
-  background: #2427d6ee;
+  background: #1c1fbeee;
   color: #fff;
   border: none;
   width: 100%;
@@ -856,11 +838,11 @@ body.dark .experience hr {
 }
 
 .btn-send:hover {
-  background: #1d1fc6ee;
+  background: #191bb9ee;
 }
 
 .footer {
-  background-color: #1316b7ee;
+  background-color: #1c1fbeee;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
@@ -877,26 +859,6 @@ body.dark .experience hr {
   font-size: 28px;
   margin-bottom: 20px;
 }
-/* 
-.footer-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-links li a:hover {
-  color: #474af0;
-} */
 
 .footer-social {
   display: flex;

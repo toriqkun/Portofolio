@@ -53,6 +53,18 @@ window.addEventListener("scroll", () => {
   });
 });
 
+window.addEventListener("load", () => {
+  revealElements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 150;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active-reveal");
+    }
+  });
+});
+
 const revealElements = document.querySelectorAll(".home-container, .about-container, .projects-container, .tech-grid, .contact-content");
 revealElements.forEach((el) => el.classList.add("reveal"));
 
@@ -61,12 +73,20 @@ backToTop.innerHTML = '<i class="fa-solid fa-chevron-up fa-lg"></i>';
 backToTop.id = "back-to-top";
 document.body.appendChild(backToTop);
 
+function updateBackToTopStyle() {
+  if (document.body.classList.contains("dark")) {
+    backToTop.style.background = "#ffffff";
+    backToTop.style.color = "#000000";
+  } else {
+    backToTop.style.background = "#0f0f0fff";
+    backToTop.style.color = "#ffffff";
+  }
+}
+
 backToTop.style.cssText = `
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background: #0f0f0fff;
-  color: white;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -75,8 +95,10 @@ backToTop.style.cssText = `
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 `;
+
+updateBackToTopStyle();
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -159,6 +181,7 @@ if (localStorage.getItem("theme") === "dark") {
   darkIcon.classList.remove("fa-sun");
   darkIcon.classList.add("fa-moon");
 }
+updateBackToTopStyle();
 
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -172,4 +195,5 @@ darkModeBtn.addEventListener("click", () => {
     darkIcon.classList.add("fa-sun");
     localStorage.setItem("theme", "light");
   }
+  updateBackToTopStyle();
 });
