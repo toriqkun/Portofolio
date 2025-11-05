@@ -197,3 +197,57 @@ darkModeBtn.addEventListener("click", () => {
   }
   updateBackToTopStyle();
 });
+
+// === SEND EMAIL MESSAGE ===
+(function () {
+  emailjs.init("lo32lOvdNeLRdQTMh");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const isDark = document.body.classList.contains("dark");
+
+  const swalTheme = {
+    background: isDark ? "#1e1e1e" : "#ffffff",
+    color: isDark ? "#f1f1f1" : "#333333",
+  };
+
+  Swal.fire({
+    title: "Sending...",
+    text: "Please wait while your message is being sent.",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+    background: swalTheme.background,
+    color: swalTheme.color,
+  });
+
+  emailjs.sendForm("service_v7hdxwk", "template_2xhxdfn", this).then(
+    () => {
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Thank you for contacting me 😊",
+        background: swalTheme.background,
+        color: swalTheme.color,
+        iconColor: isDark ? "#4ade80" : "#22c55e", // warna icon success
+        confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
+      });
+      this.reset();
+    },
+    (error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Failed to Send",
+        text: "Please check your connection or try again later.",
+        background: swalTheme.background,
+        color: swalTheme.color,
+        iconColor: isDark ? "#f87171" : "#ef4444",
+        confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
+      });
+      console.error("EmailJS Error:", error);
+    }
+  );
+});
