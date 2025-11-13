@@ -181,6 +181,12 @@ if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   darkIcon.classList.remove("fa-sun");
   darkIcon.classList.add("fa-moon");
+  logo.src = "images/logoku.webp";
+} else {
+  document.body.classList.remove("dark");
+  darkIcon.classList.remove("fa-moon");
+  darkIcon.classList.add("fa-sun");
+  logo.src = "images/logoku-dark.webp";
 }
 updateBackToTopStyle();
 
