@@ -63,7 +63,7 @@ header {
 
 .ul-list li .logo {
   margin-right: 140px;
-  font-size: 26px;
+  width: 40px;
   /* width: 200px; */
 }
 
@@ -178,10 +178,11 @@ header {
 
 .btn-home1 {
   display: flex;
-  background-color: #1ac757;
+  background-color: #2837d5;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;
+  text-decoration: none;
   padding: 10px 15px;
   cursor: pointer;
   gap: 5px;
@@ -190,7 +191,7 @@ header {
 }
 
 .btn-home1:hover {
-  background-color: #15b951;
+  background-color: #2b23ce;
 }
 
 .btnn .btn-home1 i {
@@ -201,6 +202,7 @@ header {
   background-color: transparent;
   border: 2px solid black;
   border-radius: 10px;
+  text-decoration: none;
   padding: 10px 10px;
   cursor: pointer;
   transition: 0.4s;
@@ -261,12 +263,14 @@ hr {
 
 .about p {
   padding-bottom: 25px;
+  text-align: center;
   font-size: 15px;
   color: rgb(50, 50, 50);
 }
 
 .about h1 {
   font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 .title {
@@ -274,7 +278,8 @@ hr {
 }
 
 .about .hrrr {
-  width: 30%;
+  width: 35%;
+  margin: 0 auto;
   padding-bottom: 40px;
 }
 
@@ -284,12 +289,7 @@ hr {
 }
 
 .about-info p {
-  font-size: 19px;
-}
-
-.about-container {
-  display: flex;
-  gap: 2rem;
+  font-size: 18px;
 }
 
 .about img {
@@ -858,12 +858,12 @@ body.dark .info-p2 {
 }
 
 body.dark .btn-home1 {
-  background-color: #1ac757 !important;
+  background-color: #2421c9 !important;
   color: rgb(255, 255, 255);
 }
 
 body.dark .btn-home1:hover {
-  background-color: #15b951 !important;
+  background-color: #291bc5 !important;
 }
 
 body.dark .btn-home2 {
