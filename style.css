@@ -201,6 +201,7 @@ header {
 .btn-home2 {
   background-color: transparent;
   border: 2px solid black;
+  color: #000;
   border-radius: 10px;
   text-decoration: none;
   padding: 10px 10px;
@@ -210,8 +211,7 @@ header {
 }
 
 .btn-home2:hover {
-  background-color: #000000;
-  color: #fff;
+  background-color: #d3d3d3df;
 }
 
 hr {
