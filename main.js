@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // === DARK MODE TOGGLE ===
 const darkModeBtn = document.querySelector(".dark-mode");
+const logo = document.querySelector(".logo");
 const darkIcon = darkModeBtn.querySelector("i");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -190,10 +191,12 @@ darkModeBtn.addEventListener("click", () => {
     darkIcon.classList.remove("fa-sun");
     darkIcon.classList.add("fa-moon");
     localStorage.setItem("theme", "dark");
+    logo.src = "images/logoku.webp";
   } else {
     darkIcon.classList.remove("fa-moon");
     darkIcon.classList.add("fa-sun");
     localStorage.setItem("theme", "light");
+    logo.src = "images/logoku-dark.webp";
   }
   updateBackToTopStyle();
 });
