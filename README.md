@@ -18,6 +18,7 @@ The website features a modern, responsive design with a smooth dark mode toggle 
 
 ## 🧱 Project Structure
 
+---bash
 📁 Portofolio
 │
 ├── 📁 images/ # All images and icons used in the website
