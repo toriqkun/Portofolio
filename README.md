@@ -18,7 +18,7 @@ The website features a modern, responsive design with a smooth dark mode toggle 
 
 ## 🧱 Project Structure
 
----bash
+```bash
 📁 Portofolio
 │
 ├── 📁 images/ # All images and icons used in the website
@@ -26,6 +26,7 @@ The website features a modern, responsive design with a smooth dark mode toggle 
 ├── 📄 style.css # Styling and responsive design
 └── 📄 main.js # JavaScript for dark mode, animations, and interactivity
 
+```
 ---
 
 ## 🛠️ Built With
