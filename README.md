@@ -44,7 +44,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/portofolio.git
+git clone https://github.com/toriqkun/Portofolio.git
 
 # Navigate into the project folder
 cd portofolio
@@ -52,6 +52,7 @@ cd portofolio
 # Open the website in your browser
 open index.html
 # or manually drag index.html into your browser
+```
 
 🌗 Dark Mode Logic
 ● Dark mode is implemented using a simple toggle that:
@@ -60,10 +61,16 @@ open index.html
 ● Changes the logo and UI colors accordingly.
 ● Persists the theme preference in localStorage.
 
-Author
+📸 Preview
 
+<div align="center">
+  <img src="images/profileku.png" width="800">
+</div>
+
+🧑‍💻 Author
 Toriqkun
 Fullstack Developer passionate about building elegant, responsive, and efficient web applications.
+
 💼 toriqkun
 📧 toriqkun25@gmail.com
 🌐 https://toriq-rosid.vercel.app/
