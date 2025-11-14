@@ -5,6 +5,23 @@ The website features a modern, responsive design with a smooth dark mode toggle 
 
 ---
 
+## Live Demo 🚀
+You can view the live website here: [Live Demo](https://toriq-rosid.vercel.app/)
+
+---
+
+## 🌟 Website Sections
+
+- **Home**: Developer introduction with avatar and short description
+- **About**: Experience, tech stack, personal insights, and skill cards
+- **Tech Stack**: Tools I use every day
+- **Experience**: My experiences in software engineering
+- **Projects**: Showcase of projects with images, descriptions, and skills
+- **Contact**: Contact form and social links with interactive hover effects
+- **Footer**: Quick navigation links and social media links
+
+---
+
 ## 🚀 Features
 
 - 🎨 **Responsive Design** – Works smoothly on desktop, tablet, and mobile.
@@ -71,12 +88,12 @@ open index.html
 
 ---
 
-## 🧑‍💻 Author
-Toriqkun
-Fullstack Developer passionate about building elegant, responsive, and efficient web applications.
+## 📬 Contact
 
-- 💼 toriqkun
 - 📧 toriqkun25@gmail.com
-- 🌐 https://toriq-rosid.vercel.app/
+- 📍Bekasi, Indonesia
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/toriqrosid/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/toriqkun)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/toriqrosid_/)
 
 ---
