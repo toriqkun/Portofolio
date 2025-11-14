@@ -56,12 +56,12 @@ open index.html
 
 ---
 
-🌗 Dark Mode Logic
-- ● Dark mode is implemented using a simple toggle that:
-- ● Switches the body class between dark and light.
-- ● Updates icons dynamically (fa-sun ↔ fa-moon).
-- ● Changes the logo and UI colors accordingly.
-- ● Persists the theme preference in localStorage.
+## 🌗 Dark Mode Logic
+- Dark mode is implemented using a simple toggle that:
+- Switches the body class between dark and light.
+- Updates icons dynamically (fa-sun ↔ fa-moon).
+- Changes the logo and UI colors accordingly.
+- Persists the theme preference in localStorage.
 
 ---
 
@@ -71,7 +71,7 @@ open index.html
 
 ---
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 Toriqkun
 Fullstack Developer passionate about building elegant, responsive, and efficient web applications.
 
