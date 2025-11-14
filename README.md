@@ -92,8 +92,8 @@ open index.html
 
 - 📧 toriqkun25@gmail.com
 - 📍Bekasi, Indonesia
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/toriqrosid/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/toriqkun)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/toriqrosid_/)
+- 🔗 LinkedIn: [toriqrosid](https://www.linkedin.com/in/toriqrosid/)  
+- 🐙 GitHub: [toriqkun](https://github.com/toriqkun)  
+- 📸 Instagram: [toriqrosid_](https://www.instagram.com/toriqrosid_/)
 
 ---
