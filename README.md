@@ -54,6 +54,8 @@ open index.html
 # or manually drag index.html into your browser
 ```
 
+---
+
 🌗 Dark Mode Logic
 ● Dark mode is implemented using a simple toggle that:
 ● Switches the body class between dark and light.
@@ -61,11 +63,19 @@ open index.html
 ● Changes the logo and UI colors accordingly.
 ● Persists the theme preference in localStorage.
 
+---
+
+---
+
 📸 Preview
 
 <div align="center">
   <img src="images/profileku.png" width="800">
 </div>
+
+---
+
+---
 
 🧑‍💻 Author
 Toriqkun
@@ -74,3 +84,5 @@ Fullstack Developer passionate about building elegant, responsive, and efficient
 💼 toriqkun
 📧 toriqkun25@gmail.com
 🌐 https://toriq-rosid.vercel.app/
+
+---
