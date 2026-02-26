@@ -1,11 +1,13 @@
 // === NAVIGATION SCROLL & ACTIVE LINK ===
-const navLinks = document.querySelectorAll(".ul-list li a");
+const navLinks = document.querySelectorAll(".nav-item a");
 const sections = document.querySelectorAll("section");
 const navbar = document.querySelector(".header-list");
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const navLinksContainer = document.getElementById("nav-links");
 const navbarHeight = navbar.offsetHeight;
 
 function removeActive() {
-  navLinks.forEach((link) => link.parentElement.classList.remove("active"));
+  navLinks.forEach((link) => link.closest(".nav-item")?.classList.remove("active"));
 }
 
 navLinks.forEach((link) => {
@@ -13,6 +15,7 @@ navLinks.forEach((link) => {
     e.preventDefault();
     const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
+    if (!targetSection) return;
     const targetPosition = targetSection.offsetTop - navbarHeight - 20;
 
     window.scrollTo({
@@ -22,17 +25,52 @@ navLinks.forEach((link) => {
 
     removeActive();
     link.parentElement.classList.add("active");
+
+    // Close mobile menu if open
+    navLinksContainer.classList.remove("show");
+    const menuIcon = mobileMenuBtn.querySelector("i");
+    if (menuIcon) {
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+    }
   });
 });
+
+// === MOBILE MENU TOGGLE ===
+
+if (mobileMenuBtn && navLinksContainer) {
+  mobileMenuBtn.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("show");
+    const icon = mobileMenuBtn.querySelector("i");
+    if (navLinksContainer.classList.contains("show")) {
+      icon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+      icon.classList.replace("fa-xmark", "fa-bars");
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !mobileMenuBtn.contains(e.target) &&
+      !navLinksContainer.contains(e.target)
+    ) {
+      navLinksContainer.classList.remove("show");
+      mobileMenuBtn.querySelector("i").classList.replace("fa-xmark", "fa-bars");
+    }
+  });
+}
 
 window.addEventListener("scroll", () => {
   const scrollPos = window.scrollY + navbarHeight + 40;
 
   sections.forEach((section) => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+    if (
+      scrollPos >= section.offsetTop &&
+      scrollPos < section.offsetTop + section.offsetHeight
+    ) {
       removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add("active");
+      const activeLink = document.querySelector(`.nav-item a[href="#${section.id}"]`);
+      if (activeLink) activeLink.closest(".nav-item")?.classList.add("active");
     }
   });
 
@@ -65,7 +103,9 @@ window.addEventListener("load", () => {
   });
 });
 
-const revealElements = document.querySelectorAll(".home-container, .about-container, .projects-container, .tech-grid, .contact-content");
+const revealElements = document.querySelectorAll(
+  ".home-container, .about-container, .projects-container, .tech-grid, .contact-content",
+);
 revealElements.forEach((el) => el.classList.add("reveal"));
 
 const backToTop = document.createElement("div");
@@ -104,13 +144,25 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-backToTop.addEventListener("mouseover", () => (backToTop.style.transform = "scale(1.2)"));
-backToTop.addEventListener("mouseout", () => (backToTop.style.transform = "scale(1)"));
+backToTop.addEventListener(
+  "mouseover",
+  () => (backToTop.style.transform = "scale(1.2)"),
+);
+backToTop.addEventListener(
+  "mouseout",
+  () => (backToTop.style.transform = "scale(1)"),
+);
 
 const cards = document.querySelectorAll(".project-card, .c1, .service-card");
 cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => (card.style.transform = "translateY(-8px) scale(1.01)"));
-  card.addEventListener("mouseleave", () => (card.style.transform = "translateY(0) scale(1)"));
+  card.addEventListener(
+    "mouseenter",
+    () => (card.style.transform = "translateY(-8px) scale(1.01)"),
+  );
+  card.addEventListener(
+    "mouseleave",
+    () => (card.style.transform = "translateY(0) scale(1)"),
+  );
 });
 
 const typingElement = document.querySelector(".info-home h3");
@@ -212,51 +264,53 @@ darkModeBtn.addEventListener("click", () => {
   emailjs.init("lo32lOvdNeLRdQTMh");
 })();
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const isDark = document.body.classList.contains("dark");
+    const isDark = document.body.classList.contains("dark");
 
-  const swalTheme = {
-    background: isDark ? "#1e1e1e" : "#ffffff",
-    color: isDark ? "#f1f1f1" : "#333333",
-  };
+    const swalTheme = {
+      background: isDark ? "#1e1e1e" : "#ffffff",
+      color: isDark ? "#f1f1f1" : "#333333",
+    };
 
-  Swal.fire({
-    title: "Sending...",
-    text: "Please wait while your message is being sent.",
-    allowOutsideClick: false,
-    didOpen: () => {
-      Swal.showLoading();
-    },
-    background: swalTheme.background,
-    color: swalTheme.color,
+    Swal.fire({
+      title: "Sending...",
+      text: "Please wait while your message is being sent.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      background: swalTheme.background,
+      color: swalTheme.color,
+    });
+
+    emailjs.sendForm("service_v7hdxwk", "template_2xhxdfn", this).then(
+      () => {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Thank you for contacting me 😊",
+          background: swalTheme.background,
+          color: swalTheme.color,
+          iconColor: isDark ? "#4ade80" : "#22c55e", // warna icon success
+          confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
+        });
+        this.reset();
+      },
+      (error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Failed to Send",
+          text: "Please check your connection or try again later.",
+          background: swalTheme.background,
+          color: swalTheme.color,
+          iconColor: isDark ? "#f87171" : "#ef4444",
+          confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
+        });
+        console.error("EmailJS Error:", error);
+      },
+    );
   });
-
-  emailjs.sendForm("service_v7hdxwk", "template_2xhxdfn", this).then(
-    () => {
-      Swal.fire({
-        icon: "success",
-        title: "Message Sent!",
-        text: "Thank you for contacting me 😊",
-        background: swalTheme.background,
-        color: swalTheme.color,
-        iconColor: isDark ? "#4ade80" : "#22c55e", // warna icon success
-        confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
-      });
-      this.reset();
-    },
-    (error) => {
-      Swal.fire({
-        icon: "error",
-        title: "Failed to Send",
-        text: "Please check your connection or try again later.",
-        background: swalTheme.background,
-        color: swalTheme.color,
-        iconColor: isDark ? "#f87171" : "#ef4444",
-        confirmButtonColor: isDark ? "#2563eb" : "#3b82f6",
-      });
-      console.error("EmailJS Error:", error);
-    }
-  );
-});

@@ -39,38 +39,43 @@
     </div>
     <header class="header-list">
       <div class="div-list">
-        <ul class="ul-list">
-          <li><img src="images/logoku.webp" alt="TAR" class="logo" /></li>
-          <div class="nav-links">
-            <li class="active">
+        <div class="ul-list">
+          <div class="logo-list">
+            <img src="images/logoku.webp" alt="TAR" class="logo" />
+          </div>
+          <div class="nav-links" id="nav-links">
+            <div class="nav-item active">
               <a href="#home"><i class="fa-regular fa-house"></i></a>
               <a href="#home" class="text-nav">Home</a>
-            </li>
-            <li>
+            </div>
+            <div class="nav-item">
               <a href="#about"><i class="fa-regular fa-address-card"></i></a>
               <a href="#about" class="text-nav">About</a>
-            </li>
-            <li>
+            </div>
+            <div class="nav-item">
               <a href="#techstack"><i class="fa-solid fa-gear"></i></a>
               <a href="#techstack" class="text-nav">Tech Stack</a>
-            </li>
-            <li>
+            </div>
+            <div class="nav-item">
               <a href="#experience"><i class="fa-solid fa-briefcase"></i></a>
               <a href="#experience" class="text-nav">Experience</a>
-            </li>
-            <li>
+            </div>
+            <div class="nav-item">
               <a href="#project"><i class="fa-regular fa-folder-open"></i></a>
               <a href="#project" class="text-nav">Projects</a>
-            </li>
-            <li class="nav-links">
+            </div>
+            <div class="nav-item">
               <a href="#contact"><i class="fa-regular fa-envelope"></i></a>
               <a href="#contact" class="text-nav">Contact</a>
-            </li>
+            </div>
           </div>
-          <li class="nav-button">
+          <div class="nav-actions">
             <button class="dark-mode"><i class="fa-solid fa-sun"></i></button>
-          </li>
-        </ul>
+            <div class="menu-toggle" id="mobile-menu-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- home -->
@@ -277,13 +282,33 @@
         <!-- Experience 1 -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">July 2025 - Present</div>
+          <div class="timeline-date">Oct 2025 - Nov 2025</div>
           <div class="timeline-content">
-            <h3>Fullstack Developer — Bootcamp</h3>
+            <h3>Fullstack Developer Intern</h3>
             <p>
-              Learn Web Development — Focusing on JavaScript, React, and Node.js. Proactively improve skills through
-              daily assignments and hands-on projects. Regularly engage in learning, discussions, and problem-solving to
-              deepen understanding.
+              Developed and deployed production-ready web applications using React, Express.js, and PostgreSQL, designing scalable backend architectures with authentication systems, optimizing database queries, and collaborating in an agile team environment through structured Git workflows and code reviews.
+            </p>
+          </div>
+        </div>
+        <!-- Experience 2-->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2024 - Oct 2025</div>
+          <div class="timeline-content">
+            <h3>Field Technician</h3>
+            <p>
+              Identified optimal antenna installation locations, conducted technical documentation and reporting, ensured project compliance through on-site coordination, and maintained accurate progress communication with supervisors.
+            </p>
+          </div>
+        </div>
+        <!-- Experience 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2022 - Sep 2023</div>
+          <div class="timeline-content">
+            <h3>Administrative Staff & Courier</h3>
+            <p>
+              Handled daily transaction processing by generating booking codes, recorded financial reports using Microsoft Excel, managed pickup and delivery operations, and prepared operational summaries to support business decision-making.
             </p>
           </div>
         </div>
@@ -303,48 +328,10 @@
       <div class="projects-container">
         <!-- Project 1 -->
         <div class="project-card">
-          <img src="images/project1.png" alt="Portfolio Website" />
-          <h3>Portfolio Website</h3>
-          <p>Personal portfolio to showcase my design and coding projects.</p>
-          <div class="skills">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-          </div>
-          <div class="btns">
-            <a href="https://github.com/toriqkun/Portofolio" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://toriq-rosid.vercel.app/" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <img src="images/FinEase.png" alt="Financial Ease" />
-          <h3>Financial Ease</h3>
-          <p>A web application designed to help users manage their finances effectively.</p>
-          <div class="skills">
-            <p>React</p>
-            <p>Tailwind</p>
-            <p>PostgreSQL</p>
-          </div>
-          <div class="btns">
-            <a href="https://github.com/toriqkun/FinEase" target="_blank" class="btn"
-              ><i class="fab fa-github"></i> GitHub</a
-            >
-            <a target="_blank" class="btn" style="pointer-events: none; opacity: 0.5; cursor: not-allowed"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
-            >
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <img src="images/activity.png" alt="Slotify" />
+          <img src="images/activity.png" alt="Activity" />
           <h3>Activity.do</h3>
           <p>
-            Activity.do is a modern activity and task-management platform that allows users to create, track, and
-            organize their daily tasks with ease. Users can assign priorities, categorize tasks, and collaborate in
-            real-time, making it suitable for both personal productivity and team coordination.
+            A web-based task and productivity management application designed to help users organize, prioritize, and track their daily activities in a structured way. The platform provides a clean and intuitive interface that improves productivity and simplifies task monitoring.
           </p>
           <div class="skills">
             <p>Next JS</p>
@@ -358,13 +345,13 @@
               ><i class="fab fa-github"></i> GitHub</a
             >
             <a href="https://activity-do.vercel.app/" target="_blank" class="btn"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              ><i class="fas fa-external-link-alt"></i>Demo</a
             >
           </div>
         </div>
-        <!-- Project 4 -->
+        <!-- Project 2 -->
         <div class="project-card">
-          <img src="images/circle.png" alt="Slotify" />
+          <img src="images/circle.png" alt="Circle App" />
           <h3>Circle App</h3>
           <p>
             A project social networking and microblogging platform where users can share thoughts, information, and
@@ -383,15 +370,15 @@
               ><i class="fab fa-github"></i> GitHub</a
             >
             <a href="https://circle-o.vercel.app" target="_blank" class="btn"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              ><i class="fas fa-external-link-alt"></i>Demo</a
             >
           </div>
         </div>
-        <!-- Project 5 -->
+        <!-- Project 3 -->
         <div class="project-card">
           <img src="images/slotify.jpg" alt="Slotify" />
           <h3>Slotify</h3>
-          <p>A project Schedule Library Ordering Time and In Fact Yours</p>
+          <p>A web-based booking and scheduling platform that enables users to reserve services online while allowing service providers to manage availability efficiently. The system is designed to streamline appointment management and prevent scheduling conflicts through a structured and organized workflow</p>
           <div class="skills">
             <p>Express JS</p>
             <p>Next JS</p>
@@ -409,30 +396,32 @@
               class="btn"
               aria-disabled="true"
               style="pointer-events: none; opacity: 0.5; cursor: not-allowed"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              ><i class="fas fa-external-link-alt"></i>Demo</a
             >
           </div>
         </div>
-        <!-- Project 6 -->
+        <!-- Project 4 -->
         <div class="project-card">
-          <img src="images/tasteai.png" alt="Slotify" />
-          <h3>TasteAI</h3>
+          <img src="images/stocksmart.png" alt="StockSmart" />
+          <h3>StockSmart</h3>
           <p>
-            A web application that finds the best restaurant recommendations based on your location, images, and
-            description. It's built with an AI agent to make your search easier.
+            A modern SaaS Point of Sales (POS) application designed to help business owners manage inventory
+            intelligently and automatically. With the integration of local machine learning algorithms, StockSmart not
+            only records transactions but also provides in-depth insights into your product performance.
           </p>
           <div class="skills">
             <p>Next JS</p>
             <p>Tailwind</p>
             <p>PostgreSQL</p>
-            <p>Gemini API</p>
+            <p>Prisma ORM</p>
+            <p>TypeScript</p>
           </div>
           <div class="btns">
-            <a href="https://github.com/toriqkun/TasteAI" target="_blank" class="btn"
+            <a href="https://github.com/toriqkun/point-of-sales-stocksmart" target="_blank" class="btn"
               ><i class="fab fa-github"></i> GitHub</a
             >
-            <a href="https://tasteai-taupe.vercel.app/" target="_blank" class="btn"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+            <a href="https://stocksmart-app.icunn.site/" target="_blank" class="btn"
+              ><i class="fas fa-external-link-alt"></i>Demo</a
             >
           </div>
         </div>
